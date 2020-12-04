@@ -1,26 +1,17 @@
-#include "Room.h"
+#include "Simulator.h"
 
 int main() {
-    Room test;
+    // creat a 'Field' named field;
+    Simulator::Field field;
 
-    // the number of grains;
-    int n;
-    std::cin >> n;
+    // put two point into field;
+    field.addPoint(1, 2, 1); // (x, y, density);
+    // field.addPoint(2, 1); // without 'density' parameter, it will go addPoint(x, y, 0);
 
-    // give grains coordinate (x, y) in ordered;
-    for (int i = 0; i < n; i++) {
-        double x, y;
-        std::cin >> x >> y;
-        test.push_back(x, y);
-    }
+    // set centre;
+    field.setCentre(0, 0); // (x, y);
 
-    // custom your own density degree in "Calculator.cpp" file with different fitting function.
-
-    // set centre with coordinate (x0, y0);
-    test.setCentre(); // without parameters is default '(0, 0)';
-
-    // get the radiation count with a distance from centre
-    test.get_radiation_num(1); // fill with the distance you want to get;
+    field.getRadiationCount(1);
 
     return 0;
 }

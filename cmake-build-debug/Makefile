@@ -224,6 +224,33 @@ Room.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Room.cpp.s
 .PHONY : Room.cpp.s
 
+Simulator.o: Simulator.cpp.o
+
+.PHONY : Simulator.o
+
+# target to build an object file
+Simulator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Simulator.cpp.o
+.PHONY : Simulator.cpp.o
+
+Simulator.i: Simulator.cpp.i
+
+.PHONY : Simulator.i
+
+# target to preprocess a source file
+Simulator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Simulator.cpp.i
+.PHONY : Simulator.cpp.i
+
+Simulator.s: Simulator.cpp.s
+
+.PHONY : Simulator.s
+
+# target to generate assembly for a file
+Simulator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Simulator.cpp.s
+.PHONY : Simulator.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -269,6 +296,9 @@ help:
 	@echo "... Room.o"
 	@echo "... Room.i"
 	@echo "... Room.s"
+	@echo "... Simulator.o"
+	@echo "... Simulator.i"
+	@echo "... Simulator.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

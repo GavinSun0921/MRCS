@@ -81,7 +81,7 @@ double Room::getInfinitesimalNum() const {
 
 Room::Room() {
     std::cout << "Attention:" << std::endl;
-    std::cout << "Set 'infinitesimal_num' to " << Room::getInfinitesimalNum() << "." << std::endl;
+    std::cout << "Set 'INFINITESIMAL_NUM' to " << Room::getInfinitesimalNum() << "." << std::endl;
     std::cout << "Your 'centre' is set to (0, 0)." << std::endl;
     setCentre();
     std::cout << "Your 'pool' don't have any 'Point'." << std::endl;

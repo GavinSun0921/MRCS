@@ -12,7 +12,11 @@ CMakeFiles/grain_simulate.dir/Room.cpp.o: ../Node.h
 CMakeFiles/grain_simulate.dir/Room.cpp.o: ../Room.cpp
 CMakeFiles/grain_simulate.dir/Room.cpp.o: ../Room.h
 
-CMakeFiles/grain_simulate.dir/main.cpp.o: ../Node.h
-CMakeFiles/grain_simulate.dir/main.cpp.o: ../Room.h
+CMakeFiles/grain_simulate.dir/Simulator.cpp.o: ../Calculator.h
+CMakeFiles/grain_simulate.dir/Simulator.cpp.o: ../Simulator.cpp
+CMakeFiles/grain_simulate.dir/Simulator.cpp.o: ../Simulator.h
+
+CMakeFiles/grain_simulate.dir/main.cpp.o: ../Calculator.h
+CMakeFiles/grain_simulate.dir/main.cpp.o: ../Simulator.h
 CMakeFiles/grain_simulate.dir/main.cpp.o: ../main.cpp
 
