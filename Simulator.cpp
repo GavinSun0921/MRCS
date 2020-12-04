@@ -12,11 +12,11 @@ Simulator::Point::Point(double x, double y, int density) : x(x), y(y), density(d
 }
 
 Simulator::Point::Point(double x, double y) : Simulator::Point(x, y, 0){
-    std::cout << Simulator::Point::MISS_DENSITY << std::endl;
+    Simulator::log(Simulator::Point::MISS_DENSITY);
 }
 
 Simulator::Point::Point() : Simulator::Point(0, 0) {
-    std::cout << Simulator::Point::MISS_COORDINATE << std::endl;
+    Simulator::log(Simulator::Point::MISS_COORDINATE);
 }
 
 double Simulator::Point::getX() const {
@@ -68,11 +68,11 @@ Simulator::Point &Simulator::Point::operator=(const Simulator::Point &rhs) {
 Simulator::Field::Field(std::pair<double, double>  centre, std::vector<Point> pointsInField) : centre(std::move(centre)),
                                                                                      pointsInField(std::move(
                                                                                              pointsInField)) {
-    std::cout << Simulator::Field::ATTENTION << std::endl;
+    Simulator::log(Simulator::Field::ATTENTION);
 }
 
 Simulator::Field::Field(std::pair<double, double> centre) : Simulator::Field(centre, std::vector<Simulator::Point>()){
-    std::cout << Simulator::Field::MISS_VECTOR << std::endl;
+    Simulator::log(Simulator::Field::MISS_VECTOR);
 }
 
 Simulator::Field::Field(double x, double y) : Simulator::Field(std::make_pair(x, y)) {
@@ -80,11 +80,11 @@ Simulator::Field::Field(double x, double y) : Simulator::Field(std::make_pair(x,
 }
 
 Simulator::Field::Field() : Simulator::Field(0, 0) {
-    std::cout << Simulator::Field::MISS_CENTRE << std::endl;
+    Simulator::log(Simulator::Field::MISS_CENTRE);
 }
 
 __unused void Simulator::Field::_radiationCount() {
-    std::cout << Simulator::Field::CLEAR_COUNT << std::endl;
+    Simulator::log(Simulator::Field::CLEAR_COUNT);
     Simulator::Field::radiationCount.erase(
             Simulator::Field::radiationCount.begin(),
             Simulator::Field::radiationCount.end()
@@ -100,7 +100,7 @@ __unused void Simulator::Field::setCentre(double x, double y) {
 }
 
 __unused void Simulator::Field::clearField() {
-    std::cout << Simulator::Field::CLEAR_FIELD << std::endl;
+    Simulator::log(Simulator::Field::CLEAR_FIELD);
     Field::pointsInField.clear();
     Field::_radiationCount();
 }
@@ -165,4 +165,36 @@ double Simulator::Field::getDistance(std::pair<double, double> u, std::pair<doub
     double deltaX = u.first - v.first;
     double deltaY = u.second - v.second;
     return std::sqrt(deltaX * deltaX + deltaY * deltaY);
+}
+
+Simulator::Field::~Field() {
+    Simulator::log("----END----\n");
+}
+
+__unused void Simulator::log(const std::string& message) {
+    std::ofstream log;
+    log.open("simulate.log", std::ios::app);
+
+    if (log) {
+        time_t now_time = time(nullptr);
+        log << asctime(localtime(&now_time)) << "  | " << message << std::endl;
+        log.close();
+    } else {
+        std::cout << "WARNING: Unable to write logfile." << std::endl;
+        abort();
+    }
+}
+
+void Simulator::resetLog() {
+    std::ofstream log;
+    log.open("simulate.log");
+
+    if (log) {
+        time_t now_time = time(nullptr);
+        log << asctime(localtime(&now_time)) << "  | " << "logfile is reset." << std::endl;
+        log.close();
+    } else {
+        std::cout << "WARNING: Unable to write logfile." << std::endl;
+        abort();
+    }
 }

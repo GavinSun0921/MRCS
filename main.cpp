@@ -1,6 +1,9 @@
 #include "Simulator.h"
 
 int main() {
+    // reset logfile.
+    Simulator::resetLog();
+
     // creat a 'Field' named field;
     Simulator::Field field;
 
@@ -11,6 +14,7 @@ int main() {
     // set centre;
     field.setCentre(0, 0); // (x, y);
 
+    // get radiation count with 'r' = 1.
     field.getRadiationCount(1);
 
     return 0;

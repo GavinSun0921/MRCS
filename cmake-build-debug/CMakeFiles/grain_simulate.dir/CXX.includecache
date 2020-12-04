@@ -12,14 +12,6 @@ iostream
 cmath
 -
 
-/Users/gavinsun/CLionProjects/grain_simulate/Simulator.cpp
-__bit_reference
--
-Simulator.h
-/Users/gavinsun/CLionProjects/grain_simulate/Simulator.h
-utility
--
-
 /Users/gavinsun/CLionProjects/grain_simulate/Simulator.h
 __bit_reference
 -
@@ -36,6 +28,8 @@ cmath
 Calculator.h
 /Users/gavinsun/CLionProjects/grain_simulate/Calculator.h
 ctime
+-
+fstream
 -
 
 /Users/gavinsun/CLionProjects/grain_simulate/main.cpp

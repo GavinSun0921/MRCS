@@ -13,6 +13,7 @@
 #include <cmath>
 #include "Calculator.h"
 #include <ctime>
+#include <fstream>
 
 namespace Simulator {
     class Point {
@@ -86,6 +87,8 @@ namespace Simulator {
 
         Field();
 
+        virtual ~Field();
+
         void setCentre(const std::pair<double, double> &centre);
 
         __unused void setCentre(double x, double y);
@@ -98,6 +101,10 @@ namespace Simulator {
 
         __unused double getRadiationCount(double r);
     };
+
+    __unused static void log(const std::string&);
+
+    void resetLog();
 }
 
 #endif //GRAIN_SIMULATE_SIMULATOR_H
