@@ -4,10 +4,6 @@
 
 #include "Node.h"
 
-Node::Node() {}
-
-Node::Node(double x, double y) : x(x), y(y) {}
-
 double Node::getX() const {
     return x;
 }
@@ -48,25 +44,22 @@ bool Node::operator!=(const Node &rhs) const {
     return !(rhs == *this);
 }
 
-bool Node::read() {
-    double x, y;
-    try {
-        std::cin >> x >> y;
-        this->setX(x);
-        this->setY(y);
-    } catch (std::exception &e) {
-        std::cout << e.what() << std::endl;
-        return false;
-    }
-    return true;
-}
-
 std::ostream &operator<<(std::ostream &os, const Node &node) {
-    os << "x: " << node.x << " y: " << node.y;
+    os << "x: " << node.getX() << " y: " << node.getY();
     return os;
 }
 
 double Node::get_distance(const Node &rhs) const {
     return sqrt((x-rhs.x)*(x-rhs.x) + (y-rhs.y)*(y-rhs.y));
+}
+
+Node::Node(double x, double y, int density) : x(x), y(y), density(density) {}
+
+int Node::getDensity() const {
+    return density;
+}
+
+void Node::setDensity(int density) {
+    Node::density = density;
 }
 

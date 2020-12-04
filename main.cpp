@@ -14,9 +14,7 @@ int main() {
         test.push_back(x, y);
     }
 
-    // set density;
     // custom your own density degree in "Calculator.cpp" file with different fitting function.
-    test.setDensity(); // without parameters is default '1';
 
     // set centre with coordinate (x0, y0);
     test.setCentre(); // without parameters is default '(0, 0)';

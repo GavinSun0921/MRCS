@@ -18,6 +18,8 @@ double Calculator::calculate(double dist, int density) {
             return calculate_with_density_5(dist);
         case 6:
             return calculate_with_density_6(dist);
+        default:
+            std::cout << "Warning: can't match any density!" << std::endl;
     }
     return 0;
 }

@@ -7,42 +7,41 @@
 
 #include <iostream>
 #include <cmath>
-#include <ostream>
 
-class Node {
-private:
-    double x, y;
-public:
-    Node();
+    class Node {
+    private:
+        double x, y;
+        int density;
+    public:
+        Node(double x = 0, double y = 0, int density = 0);
 
-    Node(double x, double y);
+        int getDensity() const;
 
-    double getX() const;
+        void setDensity(int density);
 
-    void setX(double x);
+        double getX() const;
 
-    double getY() const;
+        void setX(double x);
 
-    void setY(double y);
+        double getY() const;
 
-    bool operator<(const Node &rhs) const;
+        void setY(double y);
 
-    bool operator>(const Node &rhs) const;
+        bool operator<(const Node &rhs) const;
 
-    bool operator<=(const Node &rhs) const;
+        bool operator>(const Node &rhs) const;
 
-    bool operator>=(const Node &rhs) const;
+        bool operator<=(const Node &rhs) const;
 
-    bool operator==(const Node &rhs) const;
+        bool operator>=(const Node &rhs) const;
 
-    bool operator!=(const Node &rhs) const;
+        bool operator==(const Node &rhs) const;
 
-    bool read();
+        bool operator!=(const Node &rhs) const;
 
-    friend std::ostream &operator<<(std::ostream &os, const Node &node);
+        friend std::ostream &operator<<(std::ostream &os, const Node &node);
 
-    double get_distance(const Node &rhs) const;
-};
-
+        double get_distance(const Node &rhs) const;
+    };
 
 #endif //GRAIN_SIMULATE_NODE_H

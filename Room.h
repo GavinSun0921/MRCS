@@ -15,26 +15,13 @@
 class Room {
 private:
     const double infinitesimal_num = 1e4;
-    int density;
     Node centre;
     std::vector<Node> pool;
     std::map<double, double> cnt;
 public:
     Room();
 
-    Room(int density, const Node &centre);
-
-    Room(int density, const std::vector<Node> &pool);
-
-    Room(const Node &centre, const std::vector<Node> &pool);
-
-    Room(int density, const Node &centre, const std::vector<Node> &pool);
-
-    Room(int density, std::vector<std::pair<double, double> > pool);
-
-    const double getInfinitesimalNum() const;
-
-    void setPool(const std::vector<Node> &pool);
+    double getInfinitesimalNum() const;
 
     const std::vector<Node> &getPool() const;
 
@@ -50,19 +37,13 @@ public:
 
     bool operator!=(const Room &rhs) const;
 
-    int getDensity() const;
-
-    void setDensity(int density = 1);
-
     void push_back(const Node &node);
 
-    void push_back(double x, double y);
+    void push_back(double x, double y, int density = 0);
 
     const std::map<double, double> &getCnt() const;
 
-    void initCnt();
-
-    double get_radiation_num(double r, int density);
+    __unused void initCnt();
 
     double get_radiation_num(double r);
 
