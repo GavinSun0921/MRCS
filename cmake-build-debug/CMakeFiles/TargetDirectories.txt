@@ -1,0 +1,3 @@
+/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles/grain_simulate.dir
