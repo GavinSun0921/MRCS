@@ -32,17 +32,17 @@ namespace Simulator {
 
         double getX() const;
 
-        __unused void setX(double x);
+        void setX(double x);
 
         double getY() const;
 
-        __unused void setY(double y);
+        void setY(double y);
 
         int getDensity() const;
 
-        __unused void setDensity(int density);
+        void setDensity(int density);
 
-        __unused void setCoordinate(double x, double y);
+        void setCoordinate(double x, double y);
 
         bool operator==(const Point &rhs) const;
 
@@ -64,7 +64,7 @@ namespace Simulator {
         std::vector<Point> pointsInField;
         std::map<double, double> radiationCount;
 
-        __unused void _radiationCount();
+        void _radiationCount();
 
         void addPoint(const Point &point);
 
@@ -91,18 +91,18 @@ namespace Simulator {
 
         void setCentre(const std::pair<double, double> &centre);
 
-        __unused void setCentre(double x, double y);
+        void setCentre(double x, double y);
 
-        __unused void clearField();
+        void clearField();
 
-        __unused void addPoint(double x, double y, int density);
+        void addPoint(double x, double y, int density);
 
-        __unused void addPoint(double x, double y);
+        void addPoint(double x, double y);
 
-        __unused double getRadiationCount(double r);
+        double getRadiationCount(double r);
     };
 
-    __unused static void log(const std::string&);
+    static void log(const std::string&);
 
     void resetLog();
 }

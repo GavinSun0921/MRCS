@@ -23,7 +23,7 @@ double Simulator::Point::getX() const {
     return x;
 }
 
-__unused void Simulator::Point::setX(double x) {
+void Simulator::Point::setX(double x) {
     Point::x = x;
 }
 
@@ -31,7 +31,7 @@ double Simulator::Point::getY() const {
     return y;
 }
 
-__unused void Simulator::Point::setY(double y) {
+void Simulator::Point::setY(double y) {
     Point::y = y;
 }
 
@@ -39,11 +39,11 @@ int Simulator::Point::getDensity() const {
     return density;
 }
 
-__unused void Simulator::Point::setDensity(int density) {
+void Simulator::Point::setDensity(int density) {
     Point::density = density;
 }
 
-__unused void Simulator::Point::setCoordinate(double x, double y) {
+void Simulator::Point::setCoordinate(double x, double y) {
     Point::x = x;
     Point::y = y;
 }
@@ -83,7 +83,7 @@ Simulator::Field::Field() : Simulator::Field(0, 0) {
     Simulator::log(Simulator::Field::MISS_CENTRE);
 }
 
-__unused void Simulator::Field::_radiationCount() {
+void Simulator::Field::_radiationCount() {
     Simulator::log(Simulator::Field::CLEAR_COUNT);
     Simulator::Field::radiationCount.erase(
             Simulator::Field::radiationCount.begin(),
@@ -95,11 +95,11 @@ void Simulator::Field::setCentre(const std::pair<double, double> &centre) {
     Field::centre = centre;
 }
 
-__unused void Simulator::Field::setCentre(double x, double y) {
+void Simulator::Field::setCentre(double x, double y) {
     Field::setCentre(std::make_pair(x, y));
 }
 
-__unused void Simulator::Field::clearField() {
+void Simulator::Field::clearField() {
     Simulator::log(Simulator::Field::CLEAR_FIELD);
     Field::pointsInField.clear();
     Field::_radiationCount();
@@ -109,16 +109,16 @@ void Simulator::Field::addPoint(const Simulator::Point& point) {
     Field::pointsInField.push_back(point);
 }
 
-__unused void Simulator::Field::addPoint(double x, double y, int density) {
+void Simulator::Field::addPoint(double x, double y, int density) {
     Field::addPoint(Point(x, y, density));
     Field::_radiationCount();
 }
 
-__unused void Simulator::Field::addPoint(double x, double y) {
+void Simulator::Field::addPoint(double x, double y) {
     Field::addPoint(Point(x, y));
 }
 
-__unused double Simulator::Field::getRadiationCount(double r) {
+double Simulator::Field::getRadiationCount(double r) {
     if (!Field::radiationCount.count(r)) {
         std::vector<std::pair<double, double> > buffer = Field::getPoints(r);
         radiationCount[r] = calculate(buffer);
@@ -171,7 +171,7 @@ Simulator::Field::~Field() {
     Simulator::log("----END----\n");
 }
 
-__unused void Simulator::log(const std::string& message) {
+void Simulator::log(const std::string& message) {
     std::ofstream log;
     log.open("simulate.log", std::ios::app);
 

@@ -1,13 +1,13 @@
-Fri Dec  4 19:52:05 2020
+Sat Dec  5 18:29:20 2020
   | logfile is reset.
-Fri Dec  4 19:52:05 2020
+Sat Dec  5 18:29:20 2020
   | Attention: During calculating, infinitesimal number set to 10,000.
-Fri Dec  4 19:52:05 2020
+Sat Dec  5 18:29:20 2020
   | Warning: Missing parameter 'pointsInField'(std::vector<Point>), default your field doesn't have any 'Point'.
-Fri Dec  4 19:52:05 2020
+Sat Dec  5 18:29:20 2020
   | Warning: Missing parameter 'centre', default set centre to coordinate (0,0).
-Fri Dec  4 19:52:05 2020
+Sat Dec  5 18:29:20 2020
   | Attention: Radiation Count has cleared.
-Fri Dec  4 19:52:05 2020
+Sat Dec  5 18:29:20 2020
   | ----END----
 
