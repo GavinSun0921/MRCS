@@ -5,17 +5,7 @@
 Simulation of multi particle radiation counting.
 
 ## Structure
-```mermaid
-graph LR
-　　Simulator---Point
-　　Simulator---Field
-　　Point---x
-　　Point---y
-　　Point---density
-　　Field---centre
-　　Field---pointsInCount
-　　Field---radiationCount
-```
+![structure.png](img/structure.png)
 
 ## Environment
 
@@ -52,9 +42,7 @@ Simulator::Field field;
 
 After this step, your log file should have these details.
 
-```mermaid
-![img.png](img.png)
-```
+![log.png](img/log1.png)
 
 ### 3. Add 'Point' to your 'Field'
 
@@ -64,6 +52,10 @@ Like my demo in the `ProjectDirectory*/main.cpp`.
 field.addPoint(1, 2, 1); // (x, y, density);
 ```
 or you could omit 'density', it will be set to 0.
+
+After this step, your log file should have these details.
+
+![log.png](img/log2.png)
 
 ### 4. Get Radiation Count
 
