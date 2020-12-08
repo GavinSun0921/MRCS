@@ -1,4 +1,4 @@
-# Multi particle radiation simulator
+# MRCS (Multiparticle Radiation Counting Simulator)
 
 ## Introduction
 
