@@ -75,4 +75,4 @@ field.setCentre(0, 0); // (x, y);
 ```
 
 ## Contact
-Email: [gavinsun0921@foxmail.com](gavinsun0921@foxmail.com)
+Email: [gavinsun0921@foxmail.com](mailto:gavinsun0921@foxmail.com)
