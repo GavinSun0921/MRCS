@@ -86,18 +86,6 @@
 		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/Calculator.h">
 			<Option target="grain_simulate"/>
 		</Unit>
-		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/Node.cpp">
-			<Option target="grain_simulate"/>
-		</Unit>
-		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/Node.h">
-			<Option target="grain_simulate"/>
-		</Unit>
-		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/Room.cpp">
-			<Option target="grain_simulate"/>
-		</Unit>
-		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/Room.h">
-			<Option target="grain_simulate"/>
-		</Unit>
 		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/Simulator.cpp">
 			<Option target="grain_simulate"/>
 		</Unit>

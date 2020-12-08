@@ -170,60 +170,6 @@ Calculator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Calculator.cpp.s
 .PHONY : Calculator.cpp.s
 
-Node.o: Node.cpp.o
-
-.PHONY : Node.o
-
-# target to build an object file
-Node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Node.cpp.o
-.PHONY : Node.cpp.o
-
-Node.i: Node.cpp.i
-
-.PHONY : Node.i
-
-# target to preprocess a source file
-Node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Node.cpp.i
-.PHONY : Node.cpp.i
-
-Node.s: Node.cpp.s
-
-.PHONY : Node.s
-
-# target to generate assembly for a file
-Node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Node.cpp.s
-.PHONY : Node.cpp.s
-
-Room.o: Room.cpp.o
-
-.PHONY : Room.o
-
-# target to build an object file
-Room.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Room.cpp.o
-.PHONY : Room.cpp.o
-
-Room.i: Room.cpp.i
-
-.PHONY : Room.i
-
-# target to preprocess a source file
-Room.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Room.cpp.i
-.PHONY : Room.cpp.i
-
-Room.s: Room.cpp.s
-
-.PHONY : Room.s
-
-# target to generate assembly for a file
-Room.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Room.cpp.s
-.PHONY : Room.cpp.s
-
 Simulator.o: Simulator.cpp.o
 
 .PHONY : Simulator.o
@@ -290,12 +236,6 @@ help:
 	@echo "... Calculator.o"
 	@echo "... Calculator.i"
 	@echo "... Calculator.s"
-	@echo "... Node.o"
-	@echo "... Node.i"
-	@echo "... Node.s"
-	@echo "... Room.o"
-	@echo "... Room.i"
-	@echo "... Room.s"
 	@echo "... Simulator.o"
 	@echo "... Simulator.i"
 	@echo "... Simulator.s"

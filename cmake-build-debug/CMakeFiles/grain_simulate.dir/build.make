@@ -90,35 +90,9 @@ CMakeFiles/grain_simulate.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grain_simulate.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gavinsun/CLionProjects/grain_simulate/main.cpp -o CMakeFiles/grain_simulate.dir/main.cpp.s
 
-CMakeFiles/grain_simulate.dir/Node.cpp.o: CMakeFiles/grain_simulate.dir/flags.make
-CMakeFiles/grain_simulate.dir/Node.cpp.o: ../Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/grain_simulate.dir/Node.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grain_simulate.dir/Node.cpp.o -c /Users/gavinsun/CLionProjects/grain_simulate/Node.cpp
-
-CMakeFiles/grain_simulate.dir/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grain_simulate.dir/Node.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gavinsun/CLionProjects/grain_simulate/Node.cpp > CMakeFiles/grain_simulate.dir/Node.cpp.i
-
-CMakeFiles/grain_simulate.dir/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grain_simulate.dir/Node.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gavinsun/CLionProjects/grain_simulate/Node.cpp -o CMakeFiles/grain_simulate.dir/Node.cpp.s
-
-CMakeFiles/grain_simulate.dir/Room.cpp.o: CMakeFiles/grain_simulate.dir/flags.make
-CMakeFiles/grain_simulate.dir/Room.cpp.o: ../Room.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/grain_simulate.dir/Room.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grain_simulate.dir/Room.cpp.o -c /Users/gavinsun/CLionProjects/grain_simulate/Room.cpp
-
-CMakeFiles/grain_simulate.dir/Room.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grain_simulate.dir/Room.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gavinsun/CLionProjects/grain_simulate/Room.cpp > CMakeFiles/grain_simulate.dir/Room.cpp.i
-
-CMakeFiles/grain_simulate.dir/Room.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grain_simulate.dir/Room.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gavinsun/CLionProjects/grain_simulate/Room.cpp -o CMakeFiles/grain_simulate.dir/Room.cpp.s
-
 CMakeFiles/grain_simulate.dir/Calculator.cpp.o: CMakeFiles/grain_simulate.dir/flags.make
 CMakeFiles/grain_simulate.dir/Calculator.cpp.o: ../Calculator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/grain_simulate.dir/Calculator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/grain_simulate.dir/Calculator.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grain_simulate.dir/Calculator.cpp.o -c /Users/gavinsun/CLionProjects/grain_simulate/Calculator.cpp
 
 CMakeFiles/grain_simulate.dir/Calculator.cpp.i: cmake_force
@@ -131,7 +105,7 @@ CMakeFiles/grain_simulate.dir/Calculator.cpp.s: cmake_force
 
 CMakeFiles/grain_simulate.dir/Simulator.cpp.o: CMakeFiles/grain_simulate.dir/flags.make
 CMakeFiles/grain_simulate.dir/Simulator.cpp.o: ../Simulator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/grain_simulate.dir/Simulator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/grain_simulate.dir/Simulator.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/grain_simulate.dir/Simulator.cpp.o -c /Users/gavinsun/CLionProjects/grain_simulate/Simulator.cpp
 
 CMakeFiles/grain_simulate.dir/Simulator.cpp.i: cmake_force
@@ -145,8 +119,6 @@ CMakeFiles/grain_simulate.dir/Simulator.cpp.s: cmake_force
 # Object files for target grain_simulate
 grain_simulate_OBJECTS = \
 "CMakeFiles/grain_simulate.dir/main.cpp.o" \
-"CMakeFiles/grain_simulate.dir/Node.cpp.o" \
-"CMakeFiles/grain_simulate.dir/Room.cpp.o" \
 "CMakeFiles/grain_simulate.dir/Calculator.cpp.o" \
 "CMakeFiles/grain_simulate.dir/Simulator.cpp.o"
 
@@ -154,13 +126,11 @@ grain_simulate_OBJECTS = \
 grain_simulate_EXTERNAL_OBJECTS =
 
 grain_simulate: CMakeFiles/grain_simulate.dir/main.cpp.o
-grain_simulate: CMakeFiles/grain_simulate.dir/Node.cpp.o
-grain_simulate: CMakeFiles/grain_simulate.dir/Room.cpp.o
 grain_simulate: CMakeFiles/grain_simulate.dir/Calculator.cpp.o
 grain_simulate: CMakeFiles/grain_simulate.dir/Simulator.cpp.o
 grain_simulate: CMakeFiles/grain_simulate.dir/build.make
 grain_simulate: CMakeFiles/grain_simulate.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable grain_simulate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable grain_simulate"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grain_simulate.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -5,8 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/gavinsun/CLionProjects/grain_simulate/Calculator.cpp" "/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles/grain_simulate.dir/Calculator.cpp.o"
-  "/Users/gavinsun/CLionProjects/grain_simulate/Node.cpp" "/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles/grain_simulate.dir/Node.cpp.o"
-  "/Users/gavinsun/CLionProjects/grain_simulate/Room.cpp" "/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles/grain_simulate.dir/Room.cpp.o"
   "/Users/gavinsun/CLionProjects/grain_simulate/Simulator.cpp" "/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles/grain_simulate.dir/Simulator.cpp.o"
   "/Users/gavinsun/CLionProjects/grain_simulate/main.cpp" "/Users/gavinsun/CLionProjects/grain_simulate/cmake-build-debug/CMakeFiles/grain_simulate.dir/main.cpp.o"
   )

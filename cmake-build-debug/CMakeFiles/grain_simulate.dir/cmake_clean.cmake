@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/grain_simulate.dir/Calculator.cpp.o"
-  "CMakeFiles/grain_simulate.dir/Node.cpp.o"
-  "CMakeFiles/grain_simulate.dir/Room.cpp.o"
   "CMakeFiles/grain_simulate.dir/Simulator.cpp.o"
   "CMakeFiles/grain_simulate.dir/main.cpp.o"
   "grain_simulate"
