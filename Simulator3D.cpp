@@ -73,9 +73,9 @@ Simulator3D::Point &Simulator3D::Point::operator=(const Simulator3D::Point &rhs)
 }
 
 Simulator3D::Field::Field() {
-    cnt = new double**[Simulator3D::Field::MAX_RESOLUTION];
+    cnt = new double **[Simulator3D::Field::MAX_RESOLUTION];
     for (int i = 0; i < Simulator3D::Field::MAX_RESOLUTION; i++) {
-        cnt[i] = new double*[Simulator3D::Field::MAX_RESOLUTION];
+        cnt[i] = new double *[Simulator3D::Field::MAX_RESOLUTION];
     }
     for (int i = 0; i < Simulator3D::Field::MAX_RESOLUTION; i++) {
         for (int j = 0; j < Simulator3D::Field::MAX_RESOLUTION; j++) {
@@ -195,15 +195,17 @@ void Simulator3D::Field::calculate() {
     }
 }
 
-void Simulator3D::Field::output(const std::string& path, int index, int val) {
+void Simulator3D::Field::output(const std::string &path, int index, int val) {
     std::ofstream out(path);
     if (out.is_open()) {
+        out << std::fixed << std::setprecision(Simulator3D::Field::PRECISION);
         for (int i = 0; i < Simulator3D::Field::MAX_RESOLUTION; i++) {
             for (int j = 0; j < Simulator3D::Field::MAX_RESOLUTION; j++) {
-                if (index == 0) out << Simulator3D::Field::cnt[val][i][j];
-                if (index == 1) out << Simulator3D::Field::cnt[i][val][j];
-                if (index == 2) out << Simulator3D::Field::cnt[i][j][val];
-                out << " ";
+                double value;
+                if (index == 0) value = Simulator3D::Field::cnt[val][i][j];
+                if (index == 1) value = Simulator3D::Field::cnt[i][val][j];
+                if (index == 2) value = Simulator3D::Field::cnt[i][j][val];
+                out << value << " ";
             }
             out << "\n";
         }
@@ -229,6 +231,8 @@ void Simulator3D::Field::outputX(int val) {
     char buffer[255];
     getcwd(buffer, sizeof(buffer));
     std::string path = buffer;
+    path = path + "/Xlayer" + std::to_string(val) + ".txt";
+    std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
     Simulator3D::Field::outputX(path, val);
 }
 
@@ -236,6 +240,8 @@ void Simulator3D::Field::outputY(int val) {
     char buffer[255];
     getcwd(buffer, sizeof(buffer));
     std::string path = buffer;
+    path = path + "/Tlayer" + std::to_string(val) + ".txt";
+    std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
     Simulator3D::Field::outputY(path, val);
 }
 
@@ -243,5 +249,7 @@ void Simulator3D::Field::outputZ(int val) {
     char buffer[255];
     getcwd(buffer, sizeof(buffer));
     std::string path = buffer;
+    path = path + "/Zlayer" + std::to_string(val) + ".txt";
+    std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
     Simulator3D::Field::outputZ(path, val);
 }

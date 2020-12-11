@@ -12,5 +12,7 @@ int main() {
 
     std::cout << field.getCnt(0, 0, 0) << std::endl;
 
+    field.outputX(250);
+
     return 0;
 }

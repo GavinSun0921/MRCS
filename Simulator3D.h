@@ -55,13 +55,15 @@ namespace Simulator3D {
 
     class Field {
     private:
+        const std::string MISS_PATH = "Warning: Missing output file path, the output is directed to: \n\t";
+
         static const int MAX_RESOLUTION = 500;
         static const int MAX_SIZE = 20;
+        static const int PRECISION = 2;
         constexpr static const double SCALING = MAX_SIZE * 1.0 / MAX_RESOLUTION;
 
         double x0{}, y0{}, z0{};
         std::vector<Simulator3D::Point> pointsInField;
-//        double cnt[MAX_RESOLUTION][MAX_RESOLUTION][MAX_RESOLUTION]{};
         double ***cnt;
 
         void translationPoints(double x, double y, double z);
@@ -74,7 +76,7 @@ namespace Simulator3D {
 
         double calculate(int x, int y, int z);
 
-        void output(const std::string& path, int index, int val);
+        void output(const std::string &path, int index, int val);
 
     public:
         Field();
@@ -101,11 +103,11 @@ namespace Simulator3D {
 
         void calculate();
 
-        void outputX(const std::string& path, int val);
+        void outputX(const std::string &path, int val);
 
-        void outputY(const std::string& path, int val);
+        void outputY(const std::string &path, int val);
 
-        void outputZ(const std::string& path, int val);
+        void outputZ(const std::string &path, int val);
 
         void outputX(int val);
 

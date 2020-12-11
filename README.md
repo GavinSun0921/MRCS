@@ -1,5 +1,9 @@
 # MRCS (Multiparticle Radiation Counting Simulator)
 
+---
+
+# 2D Model
+
 ## Introduction
 
 Simulation of multi particle radiation counting.
@@ -73,6 +77,10 @@ If you need move the 'centre' in your 'Field', you could use this statement like
 ```C++
 field.translationPoints(0, 0); // (x, y);
 ```
+
+---
+
+# 3D Model
 
 ## Contact
 Email: [gavinsun0921@foxmail.com](mailto:gavinsun0921@foxmail.com)

@@ -102,7 +102,7 @@ namespace Simulator {
         double getRadiationCount(double r);
     };
 
-    static void log(const std::string&);
+    static void log(const std::string &);
 
     void resetLog();
 }

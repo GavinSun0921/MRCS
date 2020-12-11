@@ -11,7 +11,7 @@ Simulator::Point::Point(double x, double y, int density) : x(x), y(y), density(d
     ;
 }
 
-Simulator::Point::Point(double x, double y) : Simulator::Point(x, y, 0){
+Simulator::Point::Point(double x, double y) : Simulator::Point(x, y, 0) {
     Simulator::log(Simulator::Point::MISS_DENSITY);
 }
 
@@ -65,13 +65,13 @@ Simulator::Point &Simulator::Point::operator=(const Simulator::Point &rhs) {
     return *this;
 }
 
-Simulator::Field::Field(std::pair<double, double>  centre, std::vector<Point> pointsInField) : centre(std::move(centre)),
-                                                                                     pointsInField(std::move(
-                                                                                             pointsInField)) {
+Simulator::Field::Field(std::pair<double, double> centre, std::vector<Point> pointsInField) : centre(std::move(centre)),
+                                                                                              pointsInField(std::move(
+                                                                                                      pointsInField)) {
     Simulator::log(Simulator::Field::ATTENTION);
 }
 
-Simulator::Field::Field(std::pair<double, double> centre) : Simulator::Field(centre, std::vector<Simulator::Point>()){
+Simulator::Field::Field(std::pair<double, double> centre) : Simulator::Field(centre, std::vector<Simulator::Point>()) {
     Simulator::log(Simulator::Field::MISS_VECTOR);
 }
 
@@ -105,7 +105,7 @@ void Simulator::Field::clearField() {
     Field::_radiationCount();
 }
 
-void Simulator::Field::addPoint(const Simulator::Point& point) {
+void Simulator::Field::addPoint(const Simulator::Point &point) {
     Field::pointsInField.push_back(point);
 }
 
@@ -171,7 +171,7 @@ Simulator::Field::~Field() {
     Simulator::log("----END----\n");
 }
 
-void Simulator::log(const std::string& message) {
+void Simulator::log(const std::string &message) {
     std::ofstream log;
     log.open("simulate.log", std::ios::app);
 

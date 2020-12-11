@@ -47,3 +47,14 @@ double Calculator::calculate_with_density_5(double dist) {
 double Calculator::calculate_with_density_6(double dist) {
     return 0;
 }
+
+double Calculator::Gamma(double xx) {
+    double x(xx), y(xx);
+    double tmp = x + 5.5;
+    tmp -= (x + 0.5) * log(tmp);
+    double ser = Calculator::SER;
+    for (int i = 0; i < 6; i++) {
+        ser += Calculator::COF[i] / (++y);
+    }
+    return xx * exp((-tmp + log(Calculator::COE * ser / x)));
+}
