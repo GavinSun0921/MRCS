@@ -1,4 +1,4 @@
-#include "Simulator.h"
+#include "src/Simulator.h"
 
 int main() {
     // Reset logfile.
