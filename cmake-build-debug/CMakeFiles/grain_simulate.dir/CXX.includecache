@@ -12,17 +12,7 @@ iostream
 cmath
 -
 
-/Users/gavinsun/CLionProjects/grain_simulate/Simulator.cpp
-__bit_reference
--
-Simulator.h
-/Users/gavinsun/CLionProjects/grain_simulate/Simulator.h
-utility
--
-
-/Users/gavinsun/CLionProjects/grain_simulate/Simulator.h
-__bit_reference
--
+/Users/gavinsun/CLionProjects/grain_simulate/Simulator3D.h
 iostream
 -
 string
@@ -39,8 +29,12 @@ ctime
 -
 fstream
 -
+dirent.h
+-
+unistd.h
+-
 
 /Users/gavinsun/CLionProjects/grain_simulate/main.cpp
-Simulator.h
-/Users/gavinsun/CLionProjects/grain_simulate/Simulator.h
+Simulator3D.h
+/Users/gavinsun/CLionProjects/grain_simulate/Simulator3D.h
 

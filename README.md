@@ -71,7 +71,7 @@ It will return the radiation count by a circular with 'center' as the center and
 If you need move the 'centre' in your 'Field', you could use this statement like my demo in the `ProjectDirectory*/main.cpp`..
 
 ```C++
-field.setCentre(0, 0); // (x, y);
+field.translationPoints(0, 0); // (x, y);
 ```
 
 ## Contact

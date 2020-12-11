@@ -197,6 +197,33 @@ Simulator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Simulator.cpp.s
 .PHONY : Simulator.cpp.s
 
+Simulator3D.o: Simulator3D.cpp.o
+
+.PHONY : Simulator3D.o
+
+# target to build an object file
+Simulator3D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Simulator3D.cpp.o
+.PHONY : Simulator3D.cpp.o
+
+Simulator3D.i: Simulator3D.cpp.i
+
+.PHONY : Simulator3D.i
+
+# target to preprocess a source file
+Simulator3D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Simulator3D.cpp.i
+.PHONY : Simulator3D.cpp.i
+
+Simulator3D.s: Simulator3D.cpp.s
+
+.PHONY : Simulator3D.s
+
+# target to generate assembly for a file
+Simulator3D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grain_simulate.dir/build.make CMakeFiles/grain_simulate.dir/Simulator3D.cpp.s
+.PHONY : Simulator3D.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -239,6 +266,9 @@ help:
 	@echo "... Simulator.o"
 	@echo "... Simulator.i"
 	@echo "... Simulator.s"
+	@echo "... Simulator3D.o"
+	@echo "... Simulator3D.i"
+	@echo "... Simulator3D.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

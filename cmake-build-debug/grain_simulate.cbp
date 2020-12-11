@@ -92,6 +92,12 @@
 		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/Simulator.h">
 			<Option target="grain_simulate"/>
 		</Unit>
+		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/Simulator3D.cpp">
+			<Option target="grain_simulate"/>
+		</Unit>
+		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/Simulator3D.h">
+			<Option target="grain_simulate"/>
+		</Unit>
 		<Unit filename="/Users/gavinsun/CLionProjects/grain_simulate/main.cpp">
 			<Option target="grain_simulate"/>
 		</Unit>

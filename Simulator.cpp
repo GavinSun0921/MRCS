@@ -143,7 +143,7 @@ double Simulator::Field::calculate(const std::vector<std::pair<double, double>> 
     double ans = 0;
     for (const auto &u : Field::pointsInField) {
         for (auto v : buffer) {
-            ans += calculate(u, v) / Field::INFINITESIMAL_NUM;
+            ans += Simulator::Field::calculate(u, v) / Field::INFINITESIMAL_NUM;
         }
     }
     return ans;

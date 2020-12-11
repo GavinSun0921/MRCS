@@ -4,19 +4,15 @@
 CMakeFiles/grain_simulate.dir/Calculator.cpp.o: ../Calculator.cpp
 CMakeFiles/grain_simulate.dir/Calculator.cpp.o: ../Calculator.h
 
-CMakeFiles/grain_simulate.dir/Node.cpp.o: ../Node.cpp
-CMakeFiles/grain_simulate.dir/Node.cpp.o: ../Node.h
-
-CMakeFiles/grain_simulate.dir/Room.cpp.o: ../Calculator.h
-CMakeFiles/grain_simulate.dir/Room.cpp.o: ../Node.h
-CMakeFiles/grain_simulate.dir/Room.cpp.o: ../Room.cpp
-CMakeFiles/grain_simulate.dir/Room.cpp.o: ../Room.h
-
 CMakeFiles/grain_simulate.dir/Simulator.cpp.o: ../Calculator.h
 CMakeFiles/grain_simulate.dir/Simulator.cpp.o: ../Simulator.cpp
 CMakeFiles/grain_simulate.dir/Simulator.cpp.o: ../Simulator.h
 
+CMakeFiles/grain_simulate.dir/Simulator3D.cpp.o: ../Calculator.h
+CMakeFiles/grain_simulate.dir/Simulator3D.cpp.o: ../Simulator3D.cpp
+CMakeFiles/grain_simulate.dir/Simulator3D.cpp.o: ../Simulator3D.h
+
 CMakeFiles/grain_simulate.dir/main.cpp.o: ../Calculator.h
-CMakeFiles/grain_simulate.dir/main.cpp.o: ../Simulator.h
+CMakeFiles/grain_simulate.dir/main.cpp.o: ../Simulator3D.h
 CMakeFiles/grain_simulate.dir/main.cpp.o: ../main.cpp
 

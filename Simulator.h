@@ -22,7 +22,7 @@ namespace Simulator {
         const std::string MISS_DENSITY = "Warning: Missing parameter 'density', default set to '0'.";
 
         double x, y;
-        int density{};
+        int density;
     public:
         Point(double x, double y, int density);
 

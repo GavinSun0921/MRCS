@@ -25,7 +25,7 @@ double Calculator::calculate(double dist, int density) {
 }
 
 double Calculator::calculate_with_density_1(double dist) {
-    return 0;
+    return dist;
 }
 
 double Calculator::calculate_with_density_2(double dist) {

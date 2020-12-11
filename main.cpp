@@ -1,21 +1,16 @@
-#include "Simulator.h"
+#include "Simulator3D.h"
 
 int main() {
-    // reset logfile.
-    Simulator::resetLog();
+    Simulator3D::Field field;
 
-    // creat a 'Field' named field;
-    Simulator::Field field;
+    field.addPoint(1, 1, 1, 1);
+    field.addPoint(3, 3, 3, 1);
 
-    // put two point into field;
-    field.addPoint(1, 2, 1); // (x, y, density);
-    // field.addPoint(2, 1); // without 'density' parameter, it will go addPoint(x, y, 0);
+    field.prepare();
 
-    // set centre;
-    field.setCentre(0, 0); // (x, y);
+    field.calculate();
 
-    // get radiation count with 'r' = 1.
-    field.getRadiationCount(1);
+    std::cout << field.getCnt(0, 0, 0) << std::endl;
 
     return 0;
 }
