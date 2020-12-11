@@ -1,4 +1,4 @@
-#include "src/Simulator3D.h"
+#include "../src/Simulator3D.h"
 
 int main() {
     // Creat a 'Field' named field.
