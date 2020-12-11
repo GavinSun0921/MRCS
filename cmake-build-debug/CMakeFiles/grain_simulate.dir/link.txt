@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/grain_simulate.dir/main.cpp.o CMakeFiles/grain_simulate.dir/Calculator.cpp.o CMakeFiles/grain_simulate.dir/Simulator.cpp.o CMakeFiles/grain_simulate.dir/Simulator3D.cpp.o  -o grain_simulate 
