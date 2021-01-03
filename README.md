@@ -1,86 +1,27 @@
-# MRCS (Multiparticle Radiation Counting Simulator)
+# MRCS
+## Multiparticle Radiation Counting Simulator
+[![MRCS](https://img.shields.io/static/v1?label=GitHub&message=MRCS&color=6495ED)](https://github.com/GavinNicholas/MRCS)
 
 ---
 
-# 2D Model
+## 介绍
 
-## Introduction
+MRCS（Multiparticle Radiation Counting Simulator）是一个多粒子放射计数的虚拟仿真器，对于已知单一粒子放射效果的情况下，模拟多粒子的辐射效果，并对辐射效果计数。
 
-Simulation of multi particle radiation counting.
+## 环境
 
-## Structure
-![structure.png](img/structure.png)
+C++14及之后的版本
 
-## Environment
+[点击此处查看C++版本支持](https://en.cppreference.com/w/cpp/compiler_support)
 
-C++14 or later version.
 
-## Usage
+## 支持
 
-### 1. Set fitting curve function
+ - [x] 二维空间中多粒子模拟
+ - [x] 三维空间中多粒子模拟
+ - [x] 阶乘连续化
+ - [ ] 更加方便的单粒子参数设置
 
-In file `ProjectDirectory*/Calculator.cpp`, change function `calculate_with_density_*()` to what you want.
+## 联系方式
 
-For example, with density 1, I want `sin(x)`.
-
-change
-```C++
-double Calculator::calculate_with_density_1(double dist) {
-    return 0;
-}
-```
-to
-```C++
-double Calculator::calculate_with_density_1(double dist) {
-    return std::sin(dist);
-}
-```
-
-### 2. Creat a 'Field'
-
-Like my demo in the `ProjectDirectory*/main.cpp`.
-
-```C++
-Simulator::Field field;
-```
-
-After this step, your log file should have these details.
-
-![log.png](img/log1.png)
-
-### 3. Add 'Point' to your 'Field'
-
-Like my demo in the `ProjectDirectory*/main.cpp`.
-
-```C++
-field.addPoint(1, 2, 1); // (x, y, density);
-```
-or you could omit 'density', it will be set to 0.
-
-After this step, your log file should have these details.
-
-![log.png](img/log2.png)
-
-### 4. Get Radiation Count
-
-Like my demo in the `ProjectDirectory*/main.cpp`.
-
-```C++
-field.getRadiationCount(1);
-```
-It will return the radiation count by a circular with 'center' as the center and 'r' as the radius.
-
-### 5*. Set centre
-
-If you need move the 'centre' in your 'Field', you could use this statement like my demo in the `ProjectDirectory*/main.cpp`..
-
-```C++
-field.translationPoints(0, 0); // (x, y);
-```
-
----
-
-# 3D Model
-
-## Contact
 Email: [gavinsun0921@foxmail.com](mailto:gavinsun0921@foxmail.com)
