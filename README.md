@@ -1,6 +1,6 @@
 # MRCS
 
-[![MRCS](https://img.shields.io/static/v1?label=GitHub&message=MRCS&color=6495ED)](https://github.com/GavinNicholas/MRCS)
+[![MRCS](https://badgen.net/badge/github/MRCS?icon&label=GitHub)](https://github.com/GavinNicholas/MRCS)
 
 ## 介绍
 
@@ -10,7 +10,8 @@ MRCS（Multiparticle Radiation Counting Simulator）是一个多粒子放射计�
 
 C++14及之后的版本
 
-[点击此处查看C++版本支持](https://en.cppreference.com/w/cpp/compiler_support)
+- [C++编译器支持情况表](https://zh.cppreference.com/w/cpp/compiler_support)
+- [C++ Compiler Support](https://en.cppreference.com/w/cpp/compiler_support)
 
 ## 支持
 
