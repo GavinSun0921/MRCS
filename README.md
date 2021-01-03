@@ -1,5 +1,5 @@
 # MRCS
-## Multiparticle Radiation Counting Simulator
+
 [![MRCS](https://img.shields.io/static/v1?label=GitHub&message=MRCS&color=6495ED)](https://github.com/GavinNicholas/MRCS)
 
 ---
