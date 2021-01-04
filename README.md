@@ -1,6 +1,9 @@
-# MRCS
+![](img/cover.png)
 
-[![MRCS](https://badgen.net/badge/github/MRCS?icon&label=GitHub)](https://github.com/GavinNicholas/MRCS)
+[![MRCS](https://badgen.net/badge/github/MRCS?icon&label=GitHub&color=green)](https://github.com/GavinSun0921/MRCS)
+[![language](https://img.shields.io/badge/language-C++-F34B7D)](https://github.com/GavinSun0921/MRCS)
+[![license](https://img.shields.io/github/license/GavinSun0921/MRCS)](https://github.com/GavinSun0921/MRCS)
+[![update](https://img.shields.io/github/last-commit/GavinSun0921/MRCS)](https://github.com/GavinSun0921/MRCS)
 
 ## 介绍
 
@@ -18,8 +21,8 @@ C++14及之后的版本
  - [x] 二维空间中多粒子模拟
  - [x] 三维空间中多粒子模拟
  - [x] 阶乘连续化
- - [ ] 更加方便的单粒子参数设置
- - [ ] 使用`Python`调用本项目进行计算
+ - [ ] 更加方便的单粒子参数设置 - Pending
+ - [ ] 使用`Python`调用本项目进行计算 - Pending
 
 ## 联系方式
 
