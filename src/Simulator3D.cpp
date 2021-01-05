@@ -256,3 +256,7 @@ void Simulator3D::Field::outputZ(int val) {
     std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
     Simulator3D::Field::outputZ(path, val);
 }
+
+const int Simulator3D::Field::getMAX_RESOLUTION() {
+    return MAX_RESOLUTION;
+}
