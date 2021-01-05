@@ -73,6 +73,9 @@ Simulator3D::Point &Simulator3D::Point::operator=(const Simulator3D::Point &rhs)
 }
 
 Simulator3D::Field::Field() {
+    setX0(MAX_RESOLUTION/2);
+    setY0(MAX_RESOLUTION/2);
+    setZ0(MAX_RESOLUTION/2);
     cnt = new double **[Simulator3D::Field::MAX_RESOLUTION];
     for (int i = 0; i < Simulator3D::Field::MAX_RESOLUTION; i++) {
         cnt[i] = new double *[Simulator3D::Field::MAX_RESOLUTION];
