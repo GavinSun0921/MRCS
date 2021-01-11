@@ -115,7 +115,7 @@ namespace Simulator3D {
 
         void outputZ(int val);
 
-        const int getMAX_RESOLUTION();
+        static const int getMAX_RESOLUTION();
     };
 };
 

@@ -73,9 +73,9 @@ Simulator3D::Point &Simulator3D::Point::operator=(const Simulator3D::Point &rhs)
 }
 
 Simulator3D::Field::Field() {
-    setX0(MAX_RESOLUTION/2);
-    setY0(MAX_RESOLUTION/2);
-    setZ0(MAX_RESOLUTION/2);
+    setX0(Simulator3D::Field::MAX_SIZE / 2);
+    setY0(Simulator3D::Field::MAX_SIZE / 2);
+    setZ0(Simulator3D::Field::MAX_SIZE / 2);
     cnt = new double **[Simulator3D::Field::MAX_RESOLUTION];
     for (int i = 0; i < Simulator3D::Field::MAX_RESOLUTION; i++) {
         cnt[i] = new double *[Simulator3D::Field::MAX_RESOLUTION];
@@ -189,10 +189,18 @@ void Simulator3D::Field::prepare() {
 }
 
 void Simulator3D::Field::calculate() {
+    long long tot = Simulator3D::Field::MAX_RESOLUTION * Simulator3D::Field::MAX_RESOLUTION *
+                    Simulator3D::Field::MAX_RESOLUTION;
+    long long cnt = 0, per = 0;
     for (int x = 0; x < Simulator3D::Field::MAX_RESOLUTION; x++) {
         for (int y = 0; y < Simulator3D::Field::MAX_RESOLUTION; y++) {
             for (int z = 0; z < Simulator3D::Field::MAX_RESOLUTION; z++) {
                 Simulator3D::Field::cnt[x][y][z] = Simulator3D::Field::calculate(x, y, z);
+                cnt++;
+                if (100 * cnt / tot > per) {
+                    per = 100 * cnt / tot;
+                    printf("  calculating with %lld%%\n", per);
+                }
             }
         }
     }
@@ -243,7 +251,7 @@ void Simulator3D::Field::outputY(int val) {
     char buffer[255];
     getcwd(buffer, sizeof(buffer));
     std::string path = buffer;
-    path = path + "/Tlayer" + std::to_string(val) + ".txt";
+    path = path + "/Ylayer" + std::to_string(val) + ".txt";
     std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
     Simulator3D::Field::outputY(path, val);
 }
