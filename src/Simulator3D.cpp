@@ -199,7 +199,7 @@ void Simulator3D::Field::calculate() {
                 cnt++;
                 if (100 * cnt / tot > per) {
                     per = 100 * cnt / tot;
-                    printf("\r  calculating with %lld%%", per);
+                    printf("\rCalculating - %lld%%", per);
                     fflush(stdout);
                 }
             }
