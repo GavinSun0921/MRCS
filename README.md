@@ -1,4 +1,4 @@
-![](img/cover.png)
+![](img/cover.jpg)
 
 [![MRCS](https://badgen.net/badge/github/MRCS?icon&label=GitHub&color=green)](https://github.com/GavinSun0921/MRCS)
 [![language](https://img.shields.io/badge/language-C++-F34B7D)](https://github.com/GavinSun0921/MRCS)
