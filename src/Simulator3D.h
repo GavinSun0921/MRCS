@@ -65,6 +65,8 @@ namespace Simulator3D {
         double x0, y0, z0;
         std::vector<Simulator3D::Point> pointsInField;
         double ***cnt;
+        bool __setDataPath;
+        char __dataPath[255];
 
         void translationPoints(double x, double y, double z);
 
@@ -116,6 +118,8 @@ namespace Simulator3D {
         void outputZ(int val);
 
         static const int getMAX_RESOLUTION();
+
+        void setDataPath(char *s);
     };
 };
 
