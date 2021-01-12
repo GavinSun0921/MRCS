@@ -1,10 +1,9 @@
-#include <__bit_reference>
 //
 // Created by Gavin Sun on 2020/12/4.
 //
 
-#ifndef GRAIN_SIMULATE_SIMULATOR_H
-#define GRAIN_SIMULATE_SIMULATOR_H
+#ifndef MRCS_SIMULATOR_H
+#define MRCS_SIMULATOR_H
 
 #include <iostream>
 #include <string>
@@ -107,4 +106,4 @@ namespace Simulator {
     void resetLog();
 }
 
-#endif //GRAIN_SIMULATE_SIMULATOR_H
+#endif //MRCS_SIMULATOR_H

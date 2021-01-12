@@ -2,8 +2,8 @@
 // Created by Gavin Sun on 2020/12/11.
 //
 
-#ifndef GRAIN_SIMULATE_SIMULATOR3D_H
-#define GRAIN_SIMULATE_SIMULATOR3D_H
+#ifndef MRCS_SIMULATOR3D_H
+#define MRCS_SIMULATOR3D_H
 
 #include <iostream>
 #include <string>
@@ -119,8 +119,10 @@ namespace Simulator3D {
         static const int getMAX_RESOLUTION();
 
         void setDataPath(char *s);
+
+        void resetDataPath();
     };
 };
 
 
-#endif //GRAIN_SIMULATE_SIMULATOR3D_H
+#endif //MRCS_SIMULATOR3D_H

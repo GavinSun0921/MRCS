@@ -192,7 +192,7 @@ double Simulator3D::Field::getCnt(int x, int y, int z) {
 }
 
 void Simulator3D::Field::prepare() {
-    std::string message = "[Info] The geometric center of the point set is moved to the center of space";
+    std::string message = "[Info] The geometric center of the point set is moved to\n\tthe center of space";
     message = message + "(" + std::to_string(x0) + "," + std::to_string(y0) + "," + std::to_string(z0) + ").";
     std::cout << message << std::endl;
     Simulator3D::Field::translationPoints();
@@ -259,7 +259,9 @@ void Simulator3D::Field::outputX(int val) {
     }
     std::string path = buffer;
     path = path + "/Xlayer" + std::to_string(val) + ".txt";
-    std::cout << Simulator3D::Field::MISS_PATH << "\"" << path << "\"" << std::endl;
+    if (!_setDataPath) {
+        std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
+    }
     Simulator3D::Field::outputX(path, val);
 }
 
@@ -272,7 +274,9 @@ void Simulator3D::Field::outputY(int val) {
     }
     std::string path = buffer;
     path = path + "/Ylayer" + std::to_string(val) + ".txt";
-    std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
+    if (!_setDataPath) {
+        std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
+    }
     Simulator3D::Field::outputY(path, val);
 }
 
@@ -285,7 +289,9 @@ void Simulator3D::Field::outputZ(int val) {
     }
     std::string path = buffer;
     path = path + "/Zlayer" + std::to_string(val) + ".txt";
-    std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
+    if (!_setDataPath) {
+        std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
+    }
     Simulator3D::Field::outputZ(path, val);
 }
 
@@ -296,4 +302,8 @@ const int Simulator3D::Field::getMAX_RESOLUTION() {
 void Simulator3D::Field::setDataPath(char *s) {
     _setDataPath = true;
     strcpy(_dataPath, s);
+}
+
+void Simulator3D::Field::resetDataPath() {
+    _setDataPath = false;
 }
