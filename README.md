@@ -16,6 +16,10 @@ C++14及之后的版本
 - [C++编译器支持情况表](https://zh.cppreference.com/w/cpp/compiler_support)
 - [C++ Compiler Support](https://en.cppreference.com/w/cpp/compiler_support)
 
+额外的头文件
+
+- unistd.h
+
 ## 支持
 
  - [x] 二维空间中多粒子模拟
