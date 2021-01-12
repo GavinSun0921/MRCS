@@ -73,7 +73,7 @@ Simulator3D::Point &Simulator3D::Point::operator=(const Simulator3D::Point &rhs)
 }
 
 Simulator3D::Field::Field() {
-    __setDataPath = false;
+    _setDataPath = false;
     int size = Simulator3D::Field::MAX_SIZE;
     setX0(size / 2);
     setY0(size / 2);
@@ -94,6 +94,11 @@ Simulator3D::Field::Field() {
             }
         }
     }
+    std::cout << "[Info] Generate a Simulator3D::Field." << std::endl;
+    std::cout << "       - MAX_RESOLUTION : " << Simulator3D::Field::MAX_RESOLUTION << std::endl;
+    std::cout << "       - MAX_SIZE       : " << Simulator3D::Field::MAX_SIZE << std::endl;
+    std::cout << "       - PRECISION      : " << Simulator3D::Field::PRECISION << std::endl;
+    std::cout << "       - SCALING        : " << Simulator3D::Field::SCALING << std::endl;
 }
 
 void Simulator3D::Field::addPoint(double x, double y, double z, int density) {
@@ -187,6 +192,9 @@ double Simulator3D::Field::getCnt(int x, int y, int z) {
 }
 
 void Simulator3D::Field::prepare() {
+    std::string message = "[Info] The geometric center of the point set is moved to the center of space";
+    message = message + "(" + std::to_string(x0) + "," + std::to_string(y0) + "," + std::to_string(z0) + ").";
+    std::cout << message << std::endl;
     Simulator3D::Field::translationPoints();
 }
 
@@ -201,7 +209,7 @@ void Simulator3D::Field::calculate() {
                 cnt++;
                 if (100 * cnt / tot > per) {
                     per = 100 * cnt / tot;
-                    printf("\rCalculating - %lld%%", per);
+                    printf("\r[Info] Calculating - %lld%%", per);
                     fflush(stdout);
                 }
             }
@@ -226,7 +234,7 @@ void Simulator3D::Field::output(const std::string &path, int index, int val) {
         }
         out.close();
     } else {
-        std::cout << "Can't open file " << path << std::endl;
+        std::cout << "[ERROR] Can't open the file \"" << path << "\"" << std::endl;
     }
 }
 
@@ -244,21 +252,21 @@ void Simulator3D::Field::outputZ(const std::string &path, int val) {
 
 void Simulator3D::Field::outputX(int val) {
     char buffer[255];
-    if (__setDataPath) {
-        strcpy(buffer, __dataPath);
+    if (_setDataPath) {
+        strcpy(buffer, _dataPath);
     } else {
         getcwd(buffer, sizeof(buffer));
     }
     std::string path = buffer;
     path = path + "/Xlayer" + std::to_string(val) + ".txt";
-    std::cout << Simulator3D::Field::MISS_PATH << path << std::endl;
+    std::cout << Simulator3D::Field::MISS_PATH << "\"" << path << "\"" << std::endl;
     Simulator3D::Field::outputX(path, val);
 }
 
 void Simulator3D::Field::outputY(int val) {
     char buffer[255];
-    if (__setDataPath) {
-        strcpy(buffer, __dataPath);
+    if (_setDataPath) {
+        strcpy(buffer, _dataPath);
     } else {
         getcwd(buffer, sizeof(buffer));
     }
@@ -270,8 +278,8 @@ void Simulator3D::Field::outputY(int val) {
 
 void Simulator3D::Field::outputZ(int val) {
     char buffer[255];
-    if (__setDataPath) {
-        strcpy(buffer, __dataPath);
+    if (_setDataPath) {
+        strcpy(buffer, _dataPath);
     } else {
         getcwd(buffer, sizeof(buffer));
     }
@@ -286,6 +294,6 @@ const int Simulator3D::Field::getMAX_RESOLUTION() {
 }
 
 void Simulator3D::Field::setDataPath(char *s) {
-    __setDataPath = true;
-    strcpy(__dataPath, s);
+    _setDataPath = true;
+    strcpy(_dataPath, s);
 }

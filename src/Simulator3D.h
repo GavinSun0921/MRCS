@@ -13,7 +13,6 @@
 #include "Calculator.h"
 #include <ctime>
 #include <fstream>
-#include <dirent.h>
 #include <unistd.h>
 
 namespace Simulator3D {
@@ -55,7 +54,7 @@ namespace Simulator3D {
 
     class Field {
     private:
-        const std::string MISS_PATH = "Warning: Missing output file path, the output is directed to: \n\t";
+        const std::string MISS_PATH = "[Warning] Missing output file path, the output is directed to: \n\t";
 
         static const int MAX_RESOLUTION = 200;
         static const int MAX_SIZE = 20;
@@ -65,8 +64,8 @@ namespace Simulator3D {
         double x0, y0, z0;
         std::vector<Simulator3D::Point> pointsInField;
         double ***cnt;
-        bool __setDataPath;
-        char __dataPath[255];
+        bool _setDataPath;
+        char _dataPath[255];
 
         void translationPoints(double x, double y, double z);
 
