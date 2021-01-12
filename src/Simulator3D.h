@@ -57,12 +57,12 @@ namespace Simulator3D {
     private:
         const std::string MISS_PATH = "Warning: Missing output file path, the output is directed to: \n\t";
 
-        static const int MAX_RESOLUTION = 500;
+        static const int MAX_RESOLUTION = 200;
         static const int MAX_SIZE = 20;
         static const int PRECISION = 2;
         constexpr static const double SCALING = MAX_SIZE * 1.0 / MAX_RESOLUTION;
 
-        double x0{}, y0{}, z0{};
+        double x0, y0, z0;
         std::vector<Simulator3D::Point> pointsInField;
         double ***cnt;
 

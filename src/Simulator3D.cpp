@@ -73,9 +73,10 @@ Simulator3D::Point &Simulator3D::Point::operator=(const Simulator3D::Point &rhs)
 }
 
 Simulator3D::Field::Field() {
-    setX0(Simulator3D::Field::MAX_SIZE / 2);
-    setY0(Simulator3D::Field::MAX_SIZE / 2);
-    setZ0(Simulator3D::Field::MAX_SIZE / 2);
+    int size = Simulator3D::Field::MAX_SIZE;
+    setX0(size / 2);
+    setY0(size / 2);
+    setZ0(size / 2);
     cnt = new double **[Simulator3D::Field::MAX_RESOLUTION];
     for (int i = 0; i < Simulator3D::Field::MAX_RESOLUTION; i++) {
         cnt[i] = new double *[Simulator3D::Field::MAX_RESOLUTION];
@@ -99,9 +100,9 @@ void Simulator3D::Field::addPoint(double x, double y, double z, int density) {
 }
 
 void Simulator3D::Field::translationPoints(double x, double y, double z) {
-    double delta_x = x - Simulator3D::Field::x0;
-    double delta_y = y - Simulator3D::Field::y0;
-    double delta_z = z - Simulator3D::Field::z0;
+    double delta_x = Simulator3D::Field::x0 - x;
+    double delta_y = Simulator3D::Field::y0 - y;
+    double delta_z = Simulator3D::Field::z0 - z;
     for (auto &ele : Simulator3D::Field::pointsInField) {
         double nx = ele.getX() + delta_x;
         double ny = ele.getY() + delta_y;
@@ -153,9 +154,9 @@ const std::vector<Simulator3D::Point> &Simulator3D::Field::getPointsInField() co
 }
 
 double Simulator3D::Field::getDistance(const Simulator3D::Point &u, int x, int y, int z) {
-    double nx = (x - Simulator3D::Field::MAX_RESOLUTION * 0.5) * Simulator3D::Field::SCALING;
-    double ny = (y - Simulator3D::Field::MAX_RESOLUTION * 0.5) * Simulator3D::Field::SCALING;
-    double nz = (z - Simulator3D::Field::MAX_RESOLUTION * 0.5) * Simulator3D::Field::SCALING;
+    double nx = x * Simulator3D::Field::SCALING;
+    double ny = y * Simulator3D::Field::SCALING;
+    double nz = z * Simulator3D::Field::SCALING;
     return std::sqrt(
             (u.getX() - nx) * (u.getX() - nx) +
             (u.getY() - ny) * (u.getY() - ny) +
