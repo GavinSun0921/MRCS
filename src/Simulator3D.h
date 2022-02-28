@@ -13,7 +13,12 @@
 #include "Calculator.h"
 #include <ctime>
 #include <fstream>
-#include <unistd.h>
+
+#if defined(WIN64) || defined(_WIN64) || defined(WIN32) || defined(_WIN32)
+    #include <direct.h>
+#else
+    #include <unistd.h>
+#endif
 
 namespace Simulator3D {
     class Point {
