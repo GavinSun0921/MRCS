@@ -8,14 +8,6 @@ Simulator3D::Point::Point(double x, double y, double z, int density) : x(x), y(y
     ;
 }
 
-Simulator3D::Point::Point(double x, double y, double z) : Simulator3D::Point(x, y, z, 0) {
-    ;
-}
-
-Simulator3D::Point::Point() : Simulator3D::Point(0, 0, 0) {
-    ;
-}
-
 double Simulator3D::Point::getX() const {
     return x;
 }
@@ -201,14 +193,14 @@ void Simulator3D::Field::prepare() {
 void Simulator3D::Field::calculate() {
     long long tot = Simulator3D::Field::MAX_RESOLUTION * Simulator3D::Field::MAX_RESOLUTION *
                     Simulator3D::Field::MAX_RESOLUTION;
-    long long cnt = 0, per = 0;
+    long long counter = 0, per = 0;
     for (int x = 0; x < Simulator3D::Field::MAX_RESOLUTION; x++) {
         for (int y = 0; y < Simulator3D::Field::MAX_RESOLUTION; y++) {
             for (int z = 0; z < Simulator3D::Field::MAX_RESOLUTION; z++) {
                 Simulator3D::Field::cnt[x][y][z] = Simulator3D::Field::calculate(x, y, z);
-                cnt++;
-                if (100 * cnt / tot > per) {
-                    per = 100 * cnt / tot;
+                counter++;
+                if (100 * counter / tot > per) {
+                    per = 100 * counter / tot;
                     printf("\r[Info] Calculating - %lld%%", per);
                     fflush(stdout);
                 }

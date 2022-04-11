@@ -23,14 +23,12 @@
 namespace Simulator3D {
     class Point {
     private:
-        double x, y, z;
-        int density;
+        double x{}, y{}, z{};
+        int density{};
     public:
-        Point(double x, double y, double z, int density);
+        explicit Point(double x = 0, double y = 0, double z = 0, int density = 0);
 
-        Point(double x, double y, double z);
-
-        Point();
+        Point() = default;
 
         double getX() const;
 
@@ -59,18 +57,18 @@ namespace Simulator3D {
 
     class Field {
     private:
-        const std::string MISS_PATH = "[Warning] Missing output file path, the output is directed to: \n\t";
+        const char* MISS_PATH = "[Warning] Missing output file path, the output is directed to: \n\t";
 
         static const int MAX_RESOLUTION = 200;
         static const int MAX_SIZE = 20;
         static const int PRECISION = 2;
         constexpr static const double SCALING = MAX_SIZE * 1.0 / MAX_RESOLUTION;
 
-        double x0, y0, z0;
+        double x0{}, y0{}, z0{};
         std::vector<Simulator3D::Point> pointsInField;
         double ***cnt;
         bool _setDataPath;
-        char _dataPath[255];
+        char _dataPath[255]{};
 
         void translationPoints(double x, double y, double z);
 
